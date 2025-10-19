@@ -64,7 +64,7 @@
 
       .container {
         display: flex;
-        height: 100vh;
+        height: 100dvh;
         width: 100vw;
         justify-content: center;
         align-items: center;
@@ -74,7 +74,7 @@
       @media (max-width: 768px) {
         .container {
           flex-direction: column !important;
-          height: 100vh !important;
+          height: 100dvh !important;
           width: 100% !important;
         }
 
@@ -324,7 +324,7 @@
           opacity: 0.8;
         }
         100% {
-          transform: translateY(calc(100vh - 50px))
+          transform: translateY(calc(100dvh - 50px))
             translateX(var(--drift, 0px)) rotate(var(--rotation, 360deg));
           opacity: 0.7;
         }

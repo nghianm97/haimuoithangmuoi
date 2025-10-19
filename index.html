@@ -387,7 +387,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        background: rgba(0, 0, 0, 0.85);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1022,36 +1022,6 @@
         iframe.allow = "autoplay; encrypted-media";
         iframe.title = "Background Music";
         document.body.appendChild(iframe);
-
-        // Method 2: Create a play button as fallback
-        setTimeout(() => {
-          const playButton = document.createElement("button");
-          playButton.innerHTML = "🎵 Phát Nhạc";
-          playButton.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-            transition: all 0.3s ease;
-          `;
-          
-          playButton.onclick = () => {
-            // Open YouTube in new tab
-            window.open('https://youtu.be/hV55_cSbWP0?si=PHGgtFsmbVViga24', '_blank');
-            playButton.innerHTML = "🎵 Đang Phát";
-            playButton.style.background = "linear-gradient(45deg, #4CAF50, #66BB6A)";
-          };
-          
-          document.body.appendChild(playButton);
-        }, 2000); // Show button after 2 seconds
       }
     </script>
   </body>
